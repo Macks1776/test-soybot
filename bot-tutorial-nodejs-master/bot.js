@@ -7,10 +7,10 @@ var health = 3;
 function respond() {
   console.log(request);
   var request = JSON.parse(this.req.chunks[0]);
-  botRegex = /^\/cool guy$/;
-  botRegexSup = /^\Sup$/;
-  botRegexHit = /^\Punch$/;
-  botRegexCall = /^\@BigFuckus$/;
+  botRegex = /cool guy/i;
+  botRegexSup = /Sup/i;
+  botRegexHit = /Punch/i;
+  botRegexCall = /@BigFuckus/i;
   
   if(request.text && botRegexCall.test(request.text)) {
         if(botRegex.test(request.text)) {
