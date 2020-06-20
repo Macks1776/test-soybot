@@ -11,18 +11,18 @@ function respond() {
       botRegexHit = /^\Punch$/,
       botRegexCall = /^\@BigFuckus$/;
   if(request.text && botRegexCall.test(request.text)) {
-        if(request.text && botRegex.test(request.text)) {
+        if(botRegex.test(request.text)) {
             this.res.writeHead(200);
             postMessage();
             this.res.end();  
             }
-        else if(request.text && botRegexSup.test(request.text)) {
+        else if(botRegexSup.test(request.text)) {
              this.res.writeHead(200);
              botResponseGlobal = "Fuck Off Randy";
              postMessage();
              this.res.end();
         }
-        else if(request.text && botRegexHit.test(request.text)) {
+        else if(botRegexHit.test(request.text)) {
 
              if(health != 0){
                 health --;
