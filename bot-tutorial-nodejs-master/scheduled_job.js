@@ -12,9 +12,7 @@ function timedMessage(){
     console.log("Testing Scheduler 2");
     
     botResponseGlobal = "Testing Timed Message";
-    this.res.writeHead(200);
     postMessage();
-    this.res.end(); 
 }
 
 function postMessage() {
