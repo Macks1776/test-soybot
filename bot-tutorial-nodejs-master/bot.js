@@ -23,13 +23,16 @@ function respond() {
              this.res.end();
         }
         else if(request.text && botRegexHit.test(request.text)) {
-             this.res.writeHead(200);
+
              if(health != 0){
+                health --;
+                this.res.writeHead(200);
                 botResponseGlobal = "Ouch! Fuck";
                 postMessage();
                 this.res.end();
              }
             else{
+                this.res.writeHead(200);
                 botResponseGlobal = "IM Dead";
                 postMessage();
                 this.res.end();
@@ -38,6 +41,8 @@ function respond() {
         else {
             console.log("don't care");
             this.res.writeHead(200);
+            botResponseGlobal = "What?";
+            postMessage();
             this.res.end();
         }
   }
