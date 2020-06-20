@@ -7,8 +7,8 @@ var health = 3;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/,
-      botRegexSup = /^\Sup$/;
-      botRegexSup = /^\Sup$/;
+      botRegexSup = /^\Sup$/,
+      botRegexHit = /^\Punch$/,
       botRegexCall = /^\@BigFuckus$/;
   if(request.text && botRegexCall.test(request.text)) {
         if(request.text && botRegex.test(request.text)) {
@@ -22,7 +22,7 @@ function respond() {
              postMessage();
              this.res.end();
         }
-        else if(request.text && botRegexSup.test(request.text)) {
+        else if(request.text && botRegexHit.test(request.text)) {
              this.res.writeHead(200);
              if(health != 0){
                 botResponseGlobal = "Ouch! Fuck";
