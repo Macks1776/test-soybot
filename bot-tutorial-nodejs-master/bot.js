@@ -5,12 +5,14 @@ var botID = process.env.BOT_ID;
 var botResponseGlobal;
 var health = 3;
 function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy$/,
-      botRegexSup = /^\Sup$/,
-      botRegexHit = /^\Punch$/,
+  var request = JSON.parse(this.req.chunks[0]);
+      botRegex = /^\/cool guy$/;
+      botRegexSup = /^\Sup$/;
+      botRegexHit = /^\Punch$/;
       botRegexCall = /^\@BigFuckus$/;
-  if(request.text && botRegexCall.test(request.text)) {
+  
+  if(botRegexCall.test(request.text)) {
+    
         if(botRegex.test(request.text)) {
             this.res.writeHead(200);
             postMessage();
