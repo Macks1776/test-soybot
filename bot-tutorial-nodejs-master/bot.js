@@ -28,18 +28,14 @@ function rps(){
                             {
                                 console.log("DRAW!!");
                                 botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Rock "+" Its a Draw";
-                                this.res.writeHead(200);
                                 postMessage();
-                                this.res.end();  
                                // console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
                             else if (botRegexP.test(botResponseGlobal))
                             {
                                 console.log("PLAYER WINS!!");
                                 botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Rock "+" You Win";
-                                this.res.writeHead(200);
                                 postMessage();
-                                this.res.end(); 
                                 //playerScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
@@ -47,9 +43,7 @@ function rps(){
                             {
                                 console.log("CPU WINS!!");
                                 botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Rock "+" I Win";
-                                this.res.writeHead(200);
                                 postMessage();
-                                this.res.end(); 
                                 //cpuScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
@@ -61,9 +55,7 @@ function rps(){
                             {
                                 console.log("CPU WINS");
                                 botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Paper "+" I Win";
-                                this.res.writeHead(200);
                                 postMessage();
-                                this.res.end(); 
                                 //cpuScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
@@ -71,18 +63,14 @@ function rps(){
                             {
                                 console.log("DRAW!!");
                                 botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Paper "+" Its a Draw";
-                                this.res.writeHead(200);
                                 postMessage();
-                                this.res.end(); 
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
                             else if (botRegexS.test(botResponseGlobal))
                             {
                                 console.log("PLAYER WINS!!");
                                 botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Paper "+" You Win";
-                                this.res.writeHead(200);
                                 postMessage();
-                                this.res.end(); 
                                 //playerScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
@@ -94,9 +82,7 @@ function rps(){
                             {
                                 console.log("PLAYER WINS");
                                 botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Scissors "+" You Win";
-                                this.res.writeHead(200);
                                 postMessage();
-                                this.res.end(); 
                                 //playerScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
@@ -104,9 +90,7 @@ function rps(){
                             {
                                 console.log("CPU WINS!!");
                                 botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Scissors"+" I Win";
-                                this.res.writeHead(200);
                                 postMessage();
-                                this.res.end(); 
                                 //cpuScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
@@ -114,9 +98,7 @@ function rps(){
                             {
                                 console.log("DRAW!!");
                                 botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Scissors "+" Its a Draw";
-                                this.res.writeHead(200);
                                 postMessage();
-                                this.res.end(); 
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
                             break;
