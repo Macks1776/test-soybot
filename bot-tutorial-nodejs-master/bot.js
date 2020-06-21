@@ -12,10 +12,11 @@ function getRandomInt() {
 }
 
 function rps(){
+  console.log("Testing RPS");
   botRegexR = /Rock/i;
   botRegexP = /Paper/i;
   botRegexS = /Scissors/i;
-  switch(getRandomInt)
+  switch(getRandomInt())
                     {
                         case 1:
                             console.log("CPU chose ROCK");
