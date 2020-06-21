@@ -8,6 +8,7 @@ var uname = "you";
 var gameOn = 0;
 
 function getRandomInt() {
+  console.log("Getting Random Int");
   return Math.floor(Math.random() * Math.floor(3));
 }
 
