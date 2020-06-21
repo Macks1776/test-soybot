@@ -97,15 +97,17 @@ function respond() {
   var botRegexHit = /Punch/i;
   var botRegexCall = /@BigFuckus/i;
   var botRegexGame = /Game/i;
+  
   if(gameOn == 1){
     var botRegexR = /Rock/i;
     var botRegexP = /Paper/i;
     var botRegexS = /Scissors/i;
-    if(botRegexR.test(request.text)||botRegexP.test(request.text)||botRegexS.test(request.text)){
+    if((botRegexR.test(request.text)||botRegexP.test(request.text)||botRegexS.test(request.text))&& (req.body.name != "Big Fuckcuss II")){
       botResponseGlobal = request.text;
       rps(); 
     }
   }
+  
   if(request.text && botRegexCall.test(request.text)) {
         if(botRegex.test(request.text)) {
             this.res.writeHead(200);
