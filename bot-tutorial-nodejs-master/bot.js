@@ -85,6 +85,7 @@ function rps(){
                             }
                             break;
                     }
+  gameOn = 0;
 }
 
 function respond() {
@@ -133,11 +134,11 @@ function respond() {
             }
         }
         else if(botRegexGame.test(request.text)) {
-             game = 1;
              this.res.writeHead(200);
              botResponseGlobal = "Game On "+uname+" Rock, Paper, Scissors.. Shoot";
              postMessage();
              this.res.end();
+             gameOn = 1;
         }
         else
         {
