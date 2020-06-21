@@ -19,7 +19,7 @@ function rps(){
   botRegexS = /Scissors/i;
   switch(getRandomInt())
                     {
-                        case 1:
+                        case 0:
                             console.log("CPU chose ROCK");
                             if(botRegexR.test(botResponseGlobal))
                             {
@@ -40,7 +40,7 @@ function rps(){
                             }
                             break;
 
-                        case 2:
+                        case 1:
                             console.log("CPU chose PAPER");
                             if (botRegexR.test(botResponseGlobal))
                             {
@@ -61,7 +61,7 @@ function rps(){
                             }
                             break;
 
-                        case 3:
+                        case 2:
                             console.log("CPU chose SCISSORS");
                             if (botRegexR.test(botResponseGlobal))
                             {
