@@ -2,7 +2,7 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
-var botResponseGlobal;
+var botResponseGlobal = "rock";
 var health = 3;
 var uname = "you";
 var gameOn = 0;
