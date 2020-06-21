@@ -127,6 +127,7 @@ function respond() {
              this.res.writeHead(200);
              botResponseGlobal = "Game On "+uname+" Rock, Paper, Scissors.. Shoot";
              postMessage();
+             rps(); 
              this.res.end();
         }
         else
