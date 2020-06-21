@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 var botResponseGlobal;
 var health = 3;
 function respond() {
-  console.log(JSON.parse(request));
+  console.log(JSON.parse(this.req));
   var request = JSON.parse(this.req.chunks[0]);
   botRegex = /cool guy/i;
   botRegexSup = /Sup/i;
