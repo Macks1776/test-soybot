@@ -178,7 +178,7 @@ function respond() {
         }
         else if(botRegexScore.test(request.text)) {
              this.res.writeHead(200);
-             botResponseGlobal = "The king has " + rpsCPUScore + "You dumb fucks have " + rpsPlayerScore;
+             botResponseGlobal = "The king has " + rpsCPUScore + " You dumb fucks have " + rpsPlayerScore + " out of " + rpsTotal + " games";
              postMessage();
              this.res.end();
         }
