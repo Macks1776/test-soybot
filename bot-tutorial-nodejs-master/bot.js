@@ -18,6 +18,7 @@ function rps(){
   botRegexP = /Paper/i;
   botRegexS = /Scissors/i;
   switch(getRandomInt())
+      
                     {
                         case 0:
                             console.log("CPU chose ROCK");
