@@ -132,7 +132,7 @@ function respond() {
     var botRegexR = /Rock/i;
     var botRegexP = /Paper/i;
     var botRegexS = /Scissors/i;
-    if((botRegexR.test(request.text)||botRegexP.test(request.text)||botRegexS.test(request.text))&& (this.req.body.name != "Big Fuckcuss II")){
+    if((botRegexR.test(request.text)||botRegexP.test(request.text)||botRegexS.test(request.text))&& (this.req.body.name != "Big Fuckcuss III")){
       botResponseGlobal = request.text;
       rps(); 
     }else if(this.req.body.name != "Big Fuckcuss III"){
