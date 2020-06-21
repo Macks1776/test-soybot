@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 var botResponseGlobal;
 var health = 3;
 var uname = "you";
-var gameOn = False;
+var gameOn = 0;
 
 function getRandomInt() {
   return Math.floor(Math.random() * Math.floor(3));
@@ -91,7 +91,7 @@ function respond() {
   botRegexHit = /Punch/i;
   botRegexCall = /@BigFuckus/i;
   botRegexGame = /Game/i;
-  if(game == True){
+  if(game == 1){
     rps(); 
   }
   if(request.text && botRegexCall.test(request.text)) {
@@ -122,7 +122,7 @@ function respond() {
             }
         }
         else if(botRegexGame.test(request.text)) {
-             game = true;
+             game = 1;
              this.res.writeHead(200);
              botResponseGlobal = "Game On "+uname+" Rock, Paper, Scissors.. Shoot";
              postMessage();
