@@ -6,6 +6,78 @@ var botResponseGlobal;
 var health = 3;
 var uname = "you";
 
+function getRandomInt() {
+  return Math.floor(Math.random() * Math.floor(3));
+}
+
+function rps(){
+  switch(randomInt)
+                    {
+                        case 1:
+                            console.log("CPU chose ROCK");
+                            if(playerInput == "ROCK")
+                            {
+                                console.log("DRAW!!");
+                                console.log("Score: Player {0} - {1}", playerScore, cpuScore);
+                            }
+                            else if (playerInput == "PAPER")
+                            {
+                                console.log("PLAYER WINS!!");
+                                //playerScore++;
+                                console.log("Score: Player {0} - {1}", playerScore, cpuScore);
+                            }
+                            else if (playerInput == "SCISSORS")
+                            {
+                                console.log("CPU WINS!!");
+                                //cpuScore++;
+                                console.log("Score: Player {0} - {1}", playerScore, cpuScore);
+                            }
+                            break;
+
+                        case 2:
+                            console.log("CPU chose PAPER");
+                            if (playerInput == "ROCK")
+                            {
+                                Console.WriteLine("CPU WINS");
+                                cpuScore++;
+                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                            }
+                            else if (playerInput == "PAPER")
+                            {
+                                Console.WriteLine("DRAW!!");
+                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                            }
+                            else if (playerInput == "SCISSORS")
+                            {
+                                Console.WriteLine("PLAYER WINS!!");
+                                playerScore++;
+                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                            }
+                            break;
+
+                        case 3:
+                            Console.WriteLine("CPU chose SCISSORS");
+                            if (playerInput == "ROCK")
+                            {
+                                Console.WriteLine("PLAYER WINS");
+                                playerScore++;
+                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                            }
+                            else if (playerInput == "PAPER")
+                            {
+                                Console.WriteLine("CPU WINS!!");
+                                cpuScore++;
+                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                            }
+                            else if (playerInput == "SCISSORS")
+                            {
+                                Console.WriteLine("DRAW!!");
+                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                            }
+                            break;
+                    }
+}
+
 function respond() {
   console.log(this.req.body);
   uname = this.req.body.name;
