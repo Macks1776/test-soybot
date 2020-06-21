@@ -30,7 +30,7 @@ function rps(){
                             if(botRegexR.test(botResponseGlobal))
                             {
                                 console.log("DRAW!!");
-                                botResponseGlobal = "Player Chose rock, I Chose Rock, Its a Draw";
+                                botResponseGlobal = "Your Bitchass Chose rock, I Chose Rock, Damn a Draw";
                                 postMessage();
                                 rpsTotal++;
                                // console.log("Score: Player {0} - {1}", playerScore, cpuScore);
@@ -38,7 +38,7 @@ function rps(){
                             else if (botRegexP.test(botResponseGlobal))
                             {
                                 console.log("PLAYER WINS!!");
-                                botResponseGlobal = "Player Chose paper, I Chose Rock, You Win";
+                                botResponseGlobal = "You chose rolling paper, I Chose that crack Rock, You Win. Bitch";
                                 postMessage();
                                 rpsPlayerScore++;
                                 rpsTotal++;
@@ -47,7 +47,7 @@ function rps(){
                             else if (botRegexS.test(botResponseGlobal))
                             {
                                 console.log("CPU WINS!!");
-                                botResponseGlobal = "Player Chose scissors, I Chose Rock, I Win";
+                                botResponseGlobal = "You Chose scissors (to snip off yo dick), I Chose Rock, I Win. Now you're stoned";
                                 postMessage();
                                 rpsCPUScore++;
                                 rpsTotal++;
@@ -60,7 +60,7 @@ function rps(){
                             if (botRegexR.test(botResponseGlobal))
                             {
                                 console.log("CPU WINS");
-                                botResponseGlobal = "Player Chose rock, I Chose Paper, I win";
+                                botResponseGlobal = "You on that rock game, I Chose Paper (only hunnets $$$), I win";
                                 postMessage();
                                 rpsCPUScore++;
                                 rpsTotal++;
@@ -69,7 +69,7 @@ function rps(){
                             else if (botRegexP.test(botResponseGlobal))
                             {
                                 console.log("DRAW!!");
-                                botResponseGlobal = "Player Chose paper, I Chose Paper, Its a Draw";
+                                botResponseGlobal = "You Chose paper, I Chose Paper, Its a Draw, Bitch cash me ooutside";
                                 postMessage();
                                 rpsTotal++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
@@ -77,7 +77,7 @@ function rps(){
                             else if (botRegexS.test(botResponseGlobal))
                             {
                                 console.log("PLAYER WINS!!");
-                                botResponseGlobal = "Player Chose scissors, I Chose Paper, You Win";
+                                botResponseGlobal = "You Chose saftey scissors cuz you a retard, I Chose Paper, You Win, bitch";
                                 postMessage();
                                 rpsPlayerScore++;
                                 rpsTotal++;
@@ -90,7 +90,7 @@ function rps(){
                             if (botRegexR.test(botResponseGlobal))
                             {
                                 console.log("PLAYER WINS");
-                                botResponseGlobal = "Player Chose rock, I Chose Scissors, You Win";
+                                botResponseGlobal = "You Chose rock, I Chose Scissors, Now we smoking crack, you win";
                                 postMessage();
                                 rpsPlayerScore++;
                                 rpsTotal++;
@@ -99,7 +99,7 @@ function rps(){
                             else if (botRegexP.test(botResponseGlobal))
                             {
                                 console.log("CPU WINS!!");
-                                botResponseGlobal = "Player Chose paper, I Chose Scissors, I Win";
+                                botResponseGlobal = "You Chose paper (only pussies choose paper), I Chose Scissors (snip snip bitch), I Win and your dick is circumsized";
                                 postMessage();
                                 rpsCPUScore++;
                                 rpsTotal++;
@@ -108,7 +108,7 @@ function rps(){
                             else if (botRegexS.test(botResponseGlobal))
                             {
                                 console.log("DRAW!!");
-                                botResponseGlobal = "Player Chose scissors, I Chose Scissors, Its a Draw";
+                                botResponseGlobal = "You Chose scissors, I Chose Scissors, Oh shit we're SCISSORING, draw";
                                 postMessage();
                                 rpsTotal++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
