@@ -91,13 +91,19 @@ function respond() {
   console.log(this.req.body);
   uname = this.req.body.name;
   var request = JSON.parse(this.req.chunks[0]);
-  botRegex = /cool guy/i;
-  botRegexSup = /Sup/i;
-  botRegexHit = /Punch/i;
-  botRegexCall = /@BigFuckus/i;
-  botRegexGame = /Game/i;
+  var botRegex = /cool guy/i;
+  var botRegexSup = /Sup/i;
+  var botRegexHit = /Punch/i;
+  var botRegexCall = /@BigFuckus/i;
+  var botRegexGame = /Game/i;
   if(gameOn == 1){
-    rps(); 
+    var botRegexR = /Rock/i;
+    var botRegexP = /Paper/i;
+    var botRegexS = /Scissors/i;
+    if(botRegexR.test(request.text)||botRegexP.test(request.text)||botRegexS.test(request.text)){
+      botResponseGlobal = request.text;
+      rps(); 
+    }
   }
   if(request.text && botRegexCall.test(request.text)) {
         if(botRegex.test(request.text)) {
@@ -131,7 +137,6 @@ function respond() {
              this.res.writeHead(200);
              botResponseGlobal = "Game On "+uname+" Rock, Paper, Scissors.. Shoot";
              postMessage();
-             rps(); 
              this.res.end();
         }
         else
