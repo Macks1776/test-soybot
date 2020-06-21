@@ -91,7 +91,7 @@ function respond() {
   botRegexHit = /Punch/i;
   botRegexCall = /@BigFuckus/i;
   botRegexGame = /Game/i;
-  if(game == 1){
+  if(gameOn == 1){
     rps(); 
   }
   if(request.text && botRegexCall.test(request.text)) {
