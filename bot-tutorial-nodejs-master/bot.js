@@ -141,7 +141,7 @@ function respond() {
     if((botRegexR.test(request.text)||botRegexP.test(request.text)||botRegexS.test(request.text))&& (this.req.body.name != "Big Fuckcuss II")){
       botResponseGlobal = request.text;
       rps(); 
-    }else{
+    }else if(this.req.body.name != "Big Fuckcuss II"){
              this.res.writeHead(200);
              botResponseGlobal = "You need to Say Rock Paper or Scissors you dickhead";
              postMessage();
