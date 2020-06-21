@@ -46,7 +46,7 @@ function rps(){
                             else if (botRegexS.test(botResponseGlobal))
                             {
                                 console.log("CPU WINS!!");
-                                botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Rock "+" I Win;
+                                botResponseGlobal = "Player Chose " +botResponseGlobal+" I Chose Rock "+" I Win";
                                 this.res.writeHead(200);
                                 postMessage();
                                 this.res.end(); 
