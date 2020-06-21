@@ -4,8 +4,11 @@ var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
 var botResponseGlobal;
 var health = 3;
+var uname = "you";
+
 function respond() {
   console.log(this.req.body);
+  uname = this.req.body.name;
   var request = JSON.parse(this.req.chunks[0]);
   botRegex = /cool guy/i;
   botRegexSup = /Sup/i;
@@ -20,7 +23,7 @@ function respond() {
         }
         else if(botRegexSup.test(request.text)) {
              this.res.writeHead(200);
-             botResponseGlobal = "Fuck Off Randy";
+             botResponseGlobal = "Fuck Off "+uname;
              postMessage();
              this.res.end();
         }
