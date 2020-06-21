@@ -124,7 +124,7 @@ function respond() {
         else if(botRegexGame.test(request.text)) {
              game = true;
              this.res.writeHead(200);
-             botResponseGlobal = "Game On "+uname+" Rock, Paper, Scissors.. Shoot;
+             botResponseGlobal = "Game On "+uname+" Rock, Paper, Scissors.. Shoot";
              postMessage();
              this.res.end();
         }
