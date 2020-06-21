@@ -20,18 +20,18 @@ function rps(){
                     {
                         case 1:
                             console.log("CPU chose ROCK");
-                            if(botRegexR.test(botGlobalResponse))
+                            if(botRegexR.test(botResponseGlobal))
                             {
                                 console.log("DRAW!!");
                                // console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (botRegexP.test(botGlobalResponse))
+                            else if (botRegexP.test(botResponseGlobal))
                             {
                                 console.log("PLAYER WINS!!");
                                 //playerScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (botRegexS.test(botGlobalResponse))
+                            else if (botRegexS.test(botResponseGlobal))
                             {
                                 console.log("CPU WINS!!");
                                 //cpuScore++;
@@ -41,18 +41,18 @@ function rps(){
 
                         case 2:
                             console.log("CPU chose PAPER");
-                            if (botRegexR.test(botGlobalResponse))
+                            if (botRegexR.test(botResponseGlobal))
                             {
                                 console.log("CPU WINS");
                                 //cpuScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (botRegexP.test(botGlobalResponse))
+                            else if (botRegexP.test(botResponseGlobal))
                             {
                                 console.log("DRAW!!");
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (botRegexS.test(botGlobalResponse))
+                            else if (botRegexS.test(botResponseGlobal))
                             {
                                 console.log("PLAYER WINS!!");
                                 //playerScore++;
@@ -62,19 +62,19 @@ function rps(){
 
                         case 3:
                             console.log("CPU chose SCISSORS");
-                            if (botRegexR.test(botGlobalResponse))
+                            if (botRegexR.test(botResponseGlobal))
                             {
                                 console.log("PLAYER WINS");
                                 //playerScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (botRegexP.test(botGlobalResponse))
+                            else if (botRegexP.test(botResponseGlobal))
                             {
                                 console.log("CPU WINS!!");
                                 //cpuScore++;
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (botRegexS.test(botGlobalResponse))
+                            else if (botRegexS.test(botResponseGlobal))
                             {
                                 console.log("DRAW!!");
                                 //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
