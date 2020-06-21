@@ -5,74 +5,78 @@ var botID = process.env.BOT_ID;
 var botResponseGlobal;
 var health = 3;
 var uname = "you";
+var gameOn = False;
 
 function getRandomInt() {
   return Math.floor(Math.random() * Math.floor(3));
 }
 
 function rps(){
-  switch(randomInt)
+  botRegexR = /Rock/i;
+  botRegexP = /Paper/i;
+  botRegexS = /Scissors/i;
+  switch(getRandomInt)
                     {
                         case 1:
                             console.log("CPU chose ROCK");
-                            if(playerInput == "ROCK")
+                            if(botRegexR.test(botGlobalResponse))
                             {
                                 console.log("DRAW!!");
-                                console.log("Score: Player {0} - {1}", playerScore, cpuScore);
+                               // console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (playerInput == "PAPER")
+                            else if (botRegexP.test(botGlobalResponse))
                             {
                                 console.log("PLAYER WINS!!");
                                 //playerScore++;
-                                console.log("Score: Player {0} - {1}", playerScore, cpuScore);
+                                //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (playerInput == "SCISSORS")
+                            else if (botRegexS.test(botGlobalResponse))
                             {
                                 console.log("CPU WINS!!");
                                 //cpuScore++;
-                                console.log("Score: Player {0} - {1}", playerScore, cpuScore);
+                                //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
                             break;
 
                         case 2:
                             console.log("CPU chose PAPER");
-                            if (playerInput == "ROCK")
+                            if (botRegexR.test(botGlobalResponse))
                             {
-                                Console.WriteLine("CPU WINS");
-                                cpuScore++;
-                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                                console.log("CPU WINS");
+                                //cpuScore++;
+                                //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (playerInput == "PAPER")
+                            else if (botRegexP.test(botGlobalResponse))
                             {
-                                Console.WriteLine("DRAW!!");
-                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                                console.log("DRAW!!");
+                                //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (playerInput == "SCISSORS")
+                            else if (botRegexS.test(botGlobalResponse))
                             {
-                                Console.WriteLine("PLAYER WINS!!");
-                                playerScore++;
-                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                                console.log("PLAYER WINS!!");
+                                //playerScore++;
+                                //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
                             break;
 
                         case 3:
-                            Console.WriteLine("CPU chose SCISSORS");
-                            if (playerInput == "ROCK")
+                            console.log("CPU chose SCISSORS");
+                            if (botRegexR.test(botGlobalResponse))
                             {
-                                Console.WriteLine("PLAYER WINS");
-                                playerScore++;
-                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                                console.log("PLAYER WINS");
+                                //playerScore++;
+                                //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (playerInput == "PAPER")
+                            else if (botRegexP.test(botGlobalResponse))
                             {
-                                Console.WriteLine("CPU WINS!!");
-                                cpuScore++;
-                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                                console.log("CPU WINS!!");
+                                //cpuScore++;
+                                //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
-                            else if (playerInput == "SCISSORS")
+                            else if (botRegexS.test(botGlobalResponse))
                             {
-                                Console.WriteLine("DRAW!!");
-                                Console.WriteLine("Score: Player {0} - {1}", playerScore, cpuScore);
+                                console.log("DRAW!!");
+                                //console.log("Score: Player {0} - {1}", playerScore, cpuScore);
                             }
                             break;
                     }
@@ -86,7 +90,10 @@ function respond() {
   botRegexSup = /Sup/i;
   botRegexHit = /Punch/i;
   botRegexCall = /@BigFuckus/i;
-  
+  botRegexGame = /Game/i;
+  if(game == True){
+    rps(); 
+  }
   if(request.text && botRegexCall.test(request.text)) {
         if(botRegex.test(request.text)) {
             this.res.writeHead(200);
@@ -113,6 +120,13 @@ function respond() {
                 postMessage();
                 this.res.end();
             }
+        }
+        else if(botRegexGame.test(request.text)) {
+             game = true;
+             this.res.writeHead(200);
+             botResponseGlobal = "Game On "+uname+" Rock, Paper, Scissors.. Shoot;
+             postMessage();
+             this.res.end();
         }
         else
         {
