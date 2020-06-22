@@ -1,7 +1,11 @@
+//Startup Variables For Node Stuff (Same as doing java.import.System basically) =================================
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
+// Bot Startup Variable =========================================================================================
 var botID = process.env.BOT_ID;
+
+//Global Variables We use =======================================================================================
 var botResponseGlobal = "rock";
 var health = 3;
 var uname = "you";
@@ -10,6 +14,7 @@ var rpsPlayerScore = 0;
 var rpsCPUScore = 0;
 var rpsTotal = 0;
 
+//Funtions called by the main respond Function ==================================================================
 function getRandomInt() {
   console.log("Getting Random Int");
   var num =  Math.floor(Math.random() * Math.floor(3));
@@ -117,7 +122,7 @@ function rps(){
                     }
   gameOn = 0;
 }
-
+// Main Function that is called every time Goupme gets a message ==============================================================
 function respond() {
   console.log(this.req.body);
   uname = this.req.body.name;
@@ -129,18 +134,18 @@ function respond() {
   var botRegexGame = /Game/i;
   var botRegexScore = /Score/i;
   if(gameOn == 1){
-    var botRegexR = /Rock/i;
-    var botRegexP = /Paper/i;
-    var botRegexS = /Scissors/i;
-    if((botRegexR.test(request.text)||botRegexP.test(request.text)||botRegexS.test(request.text))&& (this.req.body.name != "Big Fuckcuss III")){
-      botResponseGlobal = request.text;
-      rps(); 
-    }else if(this.req.body.name != "Big Fuckcuss III"){
-             this.res.writeHead(200);
-             botResponseGlobal = "You need to Say Rock Paper or Scissors you dickhead";
-             postMessage();
-             this.res.end();
-    }
+  		var botRegexR = /Rock/i;
+    	var botRegexP = /Paper/i;
+    	var botRegexS = /Scissors/i;
+    	if((botRegexR.test(request.text)||botRegexP.test(request.text)||botRegexS.test(request.text))&& (this.req.body.name != "Big Fuckcuss III")){
+      		botResponseGlobal = request.text;
+      		rps(); 
+    	}else if(this.req.body.name != "Big Fuckcuss III"){
+          this.res.writeHead(200);
+          botResponseGlobal = "You need to Say Rock Paper or Scissors you dickhead";
+          postMessage();
+          this.res.end();
+    	}
   }
   else if(request.text && botRegexCall.test(request.text)) {
         if(botRegex.test(request.text)) {
@@ -195,6 +200,7 @@ function respond() {
   }
 }
 
+//External Stuff sends the text we want to the group ===================================================================
 function postMessage() {
   var botResponse, options, body, botReq;
   botResponse = botResponseGlobal;
